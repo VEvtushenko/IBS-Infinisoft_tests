@@ -25,21 +25,21 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
 
-        if (Driver.isWebMobile()) { // for chrome only
-            Map<String, Object> mobileDevice = new HashMap<>();
-            mobileDevice.put("deviceName", Driver.config.browserMobileView());
-            chromeOptions.setExperimentalOption("mobileEmulation", mobileDevice);
-        }
+//        if (Driver.isWebMobile()) { // for chrome only
+//            Map<String, Object> mobileDevice = new HashMap<>();
+//            mobileDevice.put("deviceName", Driver.config.browserMobileView());
+//            chromeOptions.setExperimentalOption("mobileEmulation", mobileDevice);
+//        }
 
-        if (Driver.isRemoteWebDriver()) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-            Configuration.remote = Driver.config.remoteDriverUrl();
-        }
+//        if (Driver.isRemoteWebDriver()) {
+//            capabilities.setCapability("enableVNC", true);
+//            capabilities.setCapability("enableVideo", true);
+//            Configuration.remote = Driver.config.remoteDriverUrl();
+//        }
 
-        if (Driver.config.browser().equals("chrome")) {
-            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-            Configuration.browserCapabilities = capabilities;
-        }
+//        if (Driver.config.browser().equals("chrome")) {
+//            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//            Configuration.browserCapabilities = capabilities;
+//        }
     }
 }

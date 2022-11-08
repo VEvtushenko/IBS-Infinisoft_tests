@@ -17,7 +17,7 @@ public interface ProjectConfig extends Config {
     @DefaultValue("1920x1080")
     String browserSize();
     String remoteDriverUrl();
-    @DefaultValue("https://https://ibs-infinisoft.ru")
+    @DefaultValue("https://ibs-infinisoft.ru")
     String webUrl();
     String videoStorage();
     String browserMobileView();
